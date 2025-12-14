@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fuente)</title>
+  <link rel="stylesheet" href="styles.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  
+</head>
+<body>
+  <h1>HOJA DE VIDA FUENTE</h1>
+  <div>
+    <fieldset>
+      <input type="text" id="ciudad" placeholder="Ciudad">
+      <input type="text" id="nodo" placeholder="Nodo">
+      <input type="text" id="movil" placeholder="Movil">
+      <input type="text" id="placa" placeholder="Placa"><br><br>
+      <span>Fuente </span><select name="fuente" id="tipo_fuente">
+        <option value="SP01">SP01</option>
+        <option value="SP02">XM3</option>
+        <option value="SP03">SP03</option>  
+      </select><br>
+      <input type="text" id="dir" placeholder="Direccion">
+      <input type="text" id="ot" placeholder="Orden de trabajo"><br><br>    
+      <span>Fecha Ultimo Mantenimiento </span><input type="date" id="fecha_ult"><br><br>    
+      <span for="subscribe">Contador</span>
+      <input type="checkbox" id="contador"> 
+      <input type="text" id="lec_cont" placeholder="Lectura Contador">
+      <input type="text" id="pacvi" placeholder="PACVI"><br><br>
+      <span>Fecha Mantenimiento    </span><input type="date" id="fecha">
+    </fieldset>
+    <fieldset>      
+      <span>Ubicacion: </span><select name="ubicacion" id="ubicacion">
+        <option value="CAMARA ELECTRIFICAD">CAMARA ELECTRIFICAD</option>
+        <option value="CAMARA TELMEX">CAMARA TELMEX</option>
+        <option value="POSTE">POSTE</option>
+        <option value="SUB. SUBTERRANEA">SUB. SUBTERRANEA</option>
+        <option value="SUB. CASETA">SUB. CASETA</option>
+        <option value="BTS COMCEL">BTS COMCEL</option>
+        <option value="EDIFICIO/CONJUNTO">EDIFICIO/CONJUNTO</option>
+      </select><br><br>
+      <span>Tipo Fuente </span><select name="tipo_fuente" id="tipo_fuente">
+        <option value="XM2">XM2</option>
+        <option value="XM3">XM3</option>
+        <option value="MULTILINK">MULTILINK</option>  
+      </select><br><br>
+      <span>TIPO SPT </span>
+      <select name="spt" id="spt">
+        <option value="FLEJE_ACERO">FLEJE ACERO</option>
+        <option value="ALAMBRE_COBRE">ALAMBRE COBRE</option>      
+      </select>
+      <input type="text" id ="t_lap" placeholder="ESTADO DE TARJETA LAP (LRI)">
+      <input type="text" id ="gabinete" placeholder="TIPO GABINETE"><br><br>
+      <span>Red Electrica</span>
+      <select name="electrica" id="electrica">
+        <option value="CONECTOR BIMETALICO">CONECTOR BIMETALICO</option>
+        <option value="ANTIFRAUDE">ANTIFRAUDE</option>
+        <option value="CONEXIÓN CAJA ELECT">CONEXIÓN CAJA ELECT</option>  
+      </select>
+    </fieldset>
+    <fieldset><legend>Datos Fuente</legend>
+      <input type="text" id="serial_f" placeholder="SERIAL FUENTE">
+      <input type="text" id="v_ac_in" placeholder="Voltaje AC entrada">
+      <input type="text" id="v_nt" placeholder="Voltaje Neutro Tierra Entrada">
+      <input type="text" id="amp" placeholder="Amperios Entrada">
+      <input type="text" id="v_ac_out" placeholder="Voltaje AC Salida">
+      <input type="text" id="amp_out" placeholder="Amperios de salida">
+      <input type="text" id="resistencia" placeholder="RESISTENCIA DEL SPT (Ω)">
+    </fieldset>
+    <fieldset><legend>BANCO PRINCIPAL</legend>
+      <input type="text" id="c_banco" placeholder="VOLT CARGA BANCO)">
+      <input type="text" id="ventilador" placeholder="VENTILADOR EXTERNO">
+      <input type="text" id="compensador" placeholder="COMPENSADOR DE BATERIA">
+      <fieldset><legend>Bateria 1</legend>
+        <input type="text" id="vacio_1" placeholder="VOLTAJE EN VACIO">
+        <input type="text" id="carga_1" placeholder="VOLTAJE CON CARGA">
+        <input type="text" id="cond_1" placeholder="CONDUCTANCIA">
+        <input type="text" id="f_fab_1" placeholder="FECHA FABRICACION">
+        <input type="text" id="marca_1" placeholder="MARCA">
+        <input type="text" id="serial_1" placeholder="SERIAL">
+      </fieldset>
+      <fieldset><legend>Bateria 2</legend>
+        <input type="text" id="vacio_2" placeholder="VOLTAJE EN VACIO">
+        <input type="text" id="carga_2" placeholder="VOLTAJE CON CARGA">
+        <input type="text" id="cond_2" placeholder="CONDUCTANCIA">
+        <input type="text" id="f_fab_2" placeholder="FECHA FABRICACION">
+        <input type="text" id="marca_2" placeholder="MARCA">
+        <input type="text" id="serial_2" placeholder="SERIAL">
+      </fieldset>
+      <fieldset><legend>Bateria 3</legend>
+        <input type="text" id="vacio_3" placeholder="VOLTAJE EN VACIO">
+        <input type="text" id="carga_3" placeholder="VOLTAJE CON CARGA">
+        <input type="text" id="cond_3" placeholder="CONDUCTANCIA">
+        <input type="text" id="f_fab_3" placeholder="FECHA FABRICACION">
+        <input type="text" id="marca_3" placeholder="MARCA">
+        <input type="text" id="serial_3" placeholder="SERIAL">
+      </fieldset>
+      <fieldset><legend>Bateria LFP</legend>
+        <input type="text" id="vacio_lfp" placeholder="VOLTAJE EN VACIO">
+        <input type="text" id="carga_lfp" placeholder="VOLTAJE CON CARGA">
+        <input type="text" id="f_fab_lfp" placeholder="FECHA FABRICACION">
+        <input type="text" id="marca_lfp" placeholder="MARCA">
+        <input type="text" id="serial_lfp" placeholder="SERIAL">
+      </fieldset>
+    </fieldset>
+    <fieldset><legend>Niveles de Operación</legend>
+      <input type="text" id="ch30" placeholder="CH30">
+      <input type="text" id="ch70" placeholder="CH70">
+      <input type="text" id="ch93" placeholder="CH93">
+      <input type="text" id="ch124" placeholder="CH124">
+      <input type="text" id="tx" placeholder="TX">
+      <input type="text" id="rx" placeholder="RX">
+      <input type="text" id="snr_up" placeholder="SRN UP">
+      <input type="text" id="snr_dw" placeholder="SRN DW">     
+    </fieldset>
+    <fieldset><legend>Material de Calibracion</legend>
+      <input type="text" id="fam" placeholder="FAM">
+      <input type="text" id="fpa" placeholder="FPA">        
+    </fieldset>
+    <fieldset><legend>Sistema de proteccion Electrico</legend>
+      <span for="subscribe">Breaker HD.....</span>
+      <input type="checkbox" id="brk"><br><br>
+      <span for="subscribe">Descargador...</span>
+      <input type="checkbox" id="desc"><br><br> 
+      <span for="subscribe">Sugender........</span>
+      <input type="checkbox" id="sugender"><br><br>       
+    </fieldset>
+    <fieldset><legend>Material de Aseguramiento</legend>
+      <span for="subscribe">CANDADO MUL-T-LOCK.....</span>
+      <input type="checkbox" id="lock"><br><br>
+      <span for="subscribe">CANDADO SEGUREX.........</span>
+      <input type="checkbox" id="segurex"><br><br>  
+      <span for="subscribe">BARRA DE SEGURIDAD.....</span>
+      <input type="checkbox" id="barra"><br><br>
+      <span for="subscribe">TAMPER SWITCH................</span>
+      <input type="checkbox" id="tamper">      
+    </fieldset>
+  </div>
+
+
+  <button onclick="generarPDF()">Generar PDF</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
